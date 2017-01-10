@@ -1,14 +1,11 @@
 #coding=utf-8
+def step(n):
+    if n ==1:
+        return 1
+    elif n ==2:
+        return 2
+    else:
+        return step(n-1) + step(n-2)
 n = int(raw_input())
-for i in range(n):
-    def f(shu):
-        if shu==2:
-            return 1
-        if shu ==3:
-            return 2
-        return f(shu-1)+f(shu-2)
 
-    m = int(raw_input())
-    temp = f(m)
-    print temp
-
+print step(n)
